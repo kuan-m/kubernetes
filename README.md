@@ -94,7 +94,15 @@ kubectl delete -f nginx-deployment.yaml
 minikube service mongo-express-service --url
 ```
 
-## Create secret, configmap first than apply them. After that our depl can see them.
+---
+## Notes:
+### **Create secret, configmap first than apply them. After that our depl can see them.**
+### **After changing configmap, secret we need  to:**
+```bash
+kubectl rollout restart deployment
+```
+
+### **Secrets are stored like base64**
 ---
 ```bash
 echo -n 'username' | base64
