@@ -48,7 +48,7 @@ kubectl delete -f [name].yaml
 ### 📊 Status of Different K8s Components
 
 ```bash
-kubectl get nodes|pod|services|replicaset|deployment
+kubectl get nodes|pod|services|replicaset|deployment|secret
 ```
 
 ```bash
@@ -87,4 +87,15 @@ kubectl apply -f nginx-deployment.yaml
 
 ```bash
 kubectl delete -f nginx-deployment.yaml
+```
+
+### 🌐 Assign external IP address for LoadBalancer
+```bash
+minikube service mongo-express-service --url
+```
+
+## Create secret, configmap first than apply them. After that our depl can see them.
+---
+```bash
+echo -n 'username' | base64
 ```
