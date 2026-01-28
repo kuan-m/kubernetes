@@ -41,11 +41,18 @@ kubectl edit deployment nginx-depl
 ```bash
 kubectl delete deployment mongodb-deployment
 ```
+```bash
+kubectl delete -f [name].yaml
+```
 
 ### 📊 Status of Different K8s Components
 
 ```bash
 kubectl get nodes|pod|services|replicaset|deployment
+```
+
+```bash
+kubectl get pod -o wide
 ```
 
 ### 🐛 Debugging Tools

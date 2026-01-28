@@ -5,15 +5,15 @@ metadata:
   labels:
     app: nginx
 spec: # spec for deployment
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels: 
       app: nginx
-  template:
+  template: # below applies to pod
     metadata:
       labels:
         app: nginx
-    spec: # specification for pods
+    spec: # blueprint for a pod
       containers:
       - name: nginx
         image: nginx:1.25
