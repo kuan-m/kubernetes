@@ -144,3 +144,17 @@ minikube tunnel
 Secret component must be in the **same namespace** as the ingress component
 ### configuring tls certificate
 ![configuring tls certificate](docs/img/ingress_tls_cert.png)
+
+## Volume
+Volume is directory with some data
+1. Storage must not depend on the pod lifecycle
+2. Storage mush be available on all nodes
+### Persistent Volume
+![Persistent Volume](docs/img/Persistent_Volume.png)
+
+pod requests the volume through the PV claim.
+Claim tries to find a volume in cluster.
+volumeMounts - volume is mounted into container
+Volume is mounted into the Pod.
+### Pod using Perstistent Volume Claim conf
+![pod_using_pvc](docs/img/pod_using_pvc.png)
