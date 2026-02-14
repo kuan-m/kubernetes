@@ -107,3 +107,40 @@ kubectl rollout restart deployment
 ```bash
 echo -n 'username' | base64
 ```
+
+
+
+## Ingress
+
+```bash
+minikube addons enable ingress
+```
+![Ingress Schema](docs/img/Ingress_and_Internal_Svc_Conf.png)
+
+```bash
+minikube dashboard
+```
+
+```bash
+kubectl get ns
+```
+
+```bash
+kubectl get all -n kubernetes-dashboard
+```
+
+```bash
+kubectl apply -f dashboard-ingress.yaml
+```
+
+```bash
+kubectl get ingress -n kubernetes-dashboard
+```
+
+```bash
+minikube tunnel
+```
+
+Secret component must be in the **same namespace** as the ingress component
+### configuring tls certificate
+![configuring tls certificate](docs/img/ingress_tls_cert.png)
