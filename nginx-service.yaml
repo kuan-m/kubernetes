@@ -7,5 +7,6 @@ spec:
     app: nginx
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 8080
+    port: 80 # Это порт самого Service (виртуального IP сервиса внутри кластера).
+    targetPort: 8080 # Это порт внутри Pod (контейнера), куда Service реально отправляет трафик.
+    # nodePort — порт на ноде для доступа извне
